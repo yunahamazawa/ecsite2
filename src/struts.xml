@@ -2,15 +2,14 @@
 <!DOCTYPE struts PUBLIC
 "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
 "http://struts.apache.org/dtds/struts-2.3.dtd">
-
-
 <struts>
-	<constant name= "struts.devMode" value= "tru e" />
-	<package name= "com.diworksdev.ecsite.action" extends= "struts-default">
+<constant name="struts.devMode" value="true" />
+
+	<package name="com.diworksdev.ecsite.action" extends="struts-default">
 
 
-	<action name = "GoHomeAction" class="com.diworksdev.ecsite.action.GoHomeAction" method="execute">
-	<result name="success"> home.jsp</result>
+	<action name="GoHomeAction" class="com.diworksdev.ecsite.action.GoHomeAction" method="execute">
+	<result name="success">home.jsp</result>
 	</action>
 
 
@@ -19,15 +18,14 @@
 	<result name="success">buyItem.jsp</result>
 	</action>
 
-
-	<action name="LoginAction" class="com.diworksdev.ecsite.action.LoginAction" method="execute" >
-	<result name="success" > buyItem.jsp </result>
+	<action name="LoginAction" class="com.diworksdev.ecsite.action.LoginAction" method="execute">
+	<result name="success">buyItem.jsp</result>
 	<result name="error">login.jsp</result>
 	</action>
 
 
 	<action name="UserCreateAction" class="com.diworksdev.ecsite.action.UserCreateAction" method="execute">
-	<result name = "success"> userCreate.jsp</result>
+	<result name="success">userCreate.jsp</result>
 	</action>
 
 
@@ -37,25 +35,25 @@
 	</action>
 
 
-	<action name = "UserCreateCompleteAction" class="com.diworksdev.ecsite.action.UserCreateCompleteAction" method="execute">
+	<action name="UserCreateCompleteAction" class="com.diworksdev.ecsite.action.UserCreateCompleteAction" method="execute">
 	<result name="success">userCreateComplete.jsp</result>
 	</action>
 
 
-	<action name = "BuyItemAction" class="com.diworksdev.ecsite.action.BuyItemAction" method="execute">
-	<result name = "success"> buyItemConfirm.jsp </result>
+	<action name="BuyItemAction" class="com.diworksdev.ecsite.action.BuyItemAction" method="execute">
+	<result name="success">buyItemConirm.jsp</result>
 	<result name="error">buyItem.jsp</result>
 	</action>
 
 
-	<action name="BuyItemConfirmAction" class="com.diworksdev.ecsite.action.BuyItemConfirmAction" method ="execute">
+	<action name="BuyItemConfirmAction" class="com.diworksdev.ecsite.action.BuyItemConfirmAction" method="execute">
 	<result name="success">buyItemComplete.jsp</result>
-	<result name="back">buyItem.jsp</result>
+	<result name="error">buyItem.jsp</result>
 	</action>
 
 
 	<action name="MyPageAction" class="com.diworksdev.ecsite.action.MyPageAction" method="execute">
-	<result name = "success"> myPage.jsp </result>
+	<result name="success">myPage.jsp</result>
 	<result name="error">home.jsp</result>
 	</action>
 
