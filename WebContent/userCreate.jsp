@@ -100,7 +100,7 @@
 				<input type="text" name="userName" value="" />
 			</td>
 		</tr>
-		<s:submit value= "投稿" />
+		<s:submit value= "登録" />
 		</s:form>
 		</table>
 		<div>
