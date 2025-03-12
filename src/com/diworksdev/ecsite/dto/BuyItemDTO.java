@@ -2,13 +2,14 @@ package com.diworksdev.ecsite.dto;
 
 public class BuyItemDTO {
 	public int id;
-
-
 	public String itemName;
 	public String itemPrice;
+
+
 	public String getItemName() {
-	return itemName;
+		return itemName;
 	}
+
 
 	public void setItemName(String itemName) {
 		this.itemName = itemName;
@@ -29,5 +30,5 @@ public class BuyItemDTO {
 	public void setId(int id) {
 		this.id = id;
 	}
-
 }
+

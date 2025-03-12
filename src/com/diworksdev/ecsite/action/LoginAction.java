@@ -1,27 +1,31 @@
 package com.diworksdev.ecsite.action;
+
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
-import com.diworksdev.ecsite.dao.BuyItemDAO;
-import com.diworksdev.ecsite.dao.LoginDAO;
-import com.diworksdev.ecsite.dto.BuyItemDTO;
-import com.diworksdev.ecsite.dto.LoginDTO;
+import com. diworksdev.ecsite.dao.BuyItemDAO;
+import com. diworksdev.ecsite.dao.LoginDAO;
+import com. diworksdev.ecsite.dto.BuyItemDTO;
+import com. diworksdev.ecsite.dto.LoginDTO;
 import com.opensymphony.xwork2.ActionSupport;
+
+
 public class LoginAction extends ActionSupport implements SessionAware {
 
 
 	private String loginUserId;
 	private String loginPassword;
-	public Map<String, Object> session;
+	private Map<String, Object> session;
 	private LoginDAO loginDAO = new LoginDAO();
 	private LoginDTO loginDTO = new LoginDTO();
 	private BuyItemDAO buyItemDAO = new BuyItemDAO();
 
-	public String execute() {
+	public String execute(){
 		String result = ERROR;
 		loginDTO = loginDAO.getLoginUserInfo(loginUserId, loginPassword);
 		session.put("loginUser", loginDTO);
+
 
 		if(((LoginDTO) session.get("loginUser")).getLoginFlg()) {
 			result = SUCCESS;
@@ -31,6 +35,7 @@ public class LoginAction extends ActionSupport implements SessionAware {
 			session.put("id", buyItemDTO.getId());
 			session.put("buyItem_name", buyItemDTO.getItemName());
 			session.put("buyItem_price", buyItemDTO.getItemPrice());
+
 			return result;
 		}
 		return result;
@@ -51,9 +56,14 @@ public class LoginAction extends ActionSupport implements SessionAware {
 	public void setLoginPassword(String loginPassword) {
 		this.loginPassword = loginPassword;
 	}
-		@Override
 
+	public Map<String, Object> getSession() {
+		return session;
+	}
+
+	@Override
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
+
 }

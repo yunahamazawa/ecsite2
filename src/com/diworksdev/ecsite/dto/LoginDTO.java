@@ -12,7 +12,6 @@ public class LoginDTO {
 		return loginId;
 	}
 
-
 	public void setLoginId(String loginId) {
 		this.loginId = loginId;
 	}
@@ -40,5 +39,4 @@ public class LoginDTO {
 	public void setLoginFlg(boolean loginFlg) {
 		this.loginFlg = loginFlg;
 	}
-
 }

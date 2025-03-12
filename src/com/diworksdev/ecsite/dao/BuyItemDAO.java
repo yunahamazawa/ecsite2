@@ -1,4 +1,5 @@
 package com.diworksdev.ecsite.dao;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -6,13 +7,15 @@ import java.sql.ResultSet;
 import com.diworksdev.ecsite.dto.BuyItemDTO;
 import com.diworksdev.ecsite.util.DBConnector;
 
-public class BuyItemDAO {
-	private DBConnector dbConnector = new DBConnector();
-	private Connection connection = dbConnector.getConnection();
-	private BuyItemDTO buyItemDTO = new BuyItemDTO();
 
-	public BuyItemDTO getBuyItemInfo() {
-		String sql = "SELECT id, item_name, item_price FROM item_info_transaction";
+public class BuyItemDAO {
+		private DBConnector dbConnector = new DBConnector();
+		private Connection connection = dbConnector.getConnection();
+		BuyItemDTO buyItemDTO = new BuyItemDTO();
+
+
+		public BuyItemDTO getBuyItemInfo(){
+			String sql = "SELECT id, item_name, item_price FROM item_info_transaction";
 
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -24,11 +27,10 @@ public class BuyItemDAO {
 				buyItemDTO.setItemName(resultSet.getString ("item_name"));
 				buyItemDTO.setItemPrice(resultSet.getString("item_price"));
 			}
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
 
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-		return buyItemDTO;
+			return buyItemDTO;
 	}
-
 }
