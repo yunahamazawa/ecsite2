@@ -18,6 +18,7 @@ public class BuyItemConfirmAction extends ActionSupport implements SessionAware 
 			session.get("count").toString(),
 			session.get("login_user_id").toString(),
 			session.get("pay").toString());
+
 	String result = SUCCESS;
 	return result;
 	}
