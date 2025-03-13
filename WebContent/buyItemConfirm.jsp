@@ -9,6 +9,7 @@
 	<meta http-equiv= "Content-Script-Type" content= "text/javascript" />
 	<meta http-equiv= "imagetoolbar" content= "no" />
 	<meta name= "description" content= "" />
+	<script src= "http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
 	<meta name= "keywords" content= "" />
 	<title>buyItemConfirm画面</title>
 
