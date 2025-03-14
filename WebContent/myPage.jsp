@@ -71,7 +71,7 @@
 		<div id = "pr">
 		</div>
 	</div>
-	<div id="main" >
+	<div id= "main" >
 		<div id= "top">
 			<p> MyPage </p>
 		</div>
@@ -110,7 +110,7 @@
 	</s:if>
 
 	<div id = "text-right">
-		<p> Homeへ戻る場合は <a href = ' <s:url action= "GoHomeAction "/>'>
+		<p> Homeへ戻る場合は <a href = '<s:url action= "GoHomeAction" />'>
 			こちら </a> </p>
 		<p>ログアウトする場合は <a href= '<s:url action= "LogoutAction" />'>
 			こちら </a> </p>
